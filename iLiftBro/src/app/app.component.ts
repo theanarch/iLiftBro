@@ -6,7 +6,6 @@ import { Config, Nav, Platform } from 'ionic-angular';
 
 import { FirstRunPage } from '../pages';
 import { Settings } from '../providers';
-import azureMobileClient from 'azure-mobile-apps-client';
 
 @Component({
   template: `<ion-menu [content]="content">
@@ -34,8 +33,8 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   pages: any[] = [
-    { title: 'Tutorial', component: 'TutorialPage' },
-    { title: 'Welcome', component: 'WelcomePage' },
+    // { title: 'Tutorial', component: 'TutorialPage' },
+    // { title: 'Welcome', component: 'WelcomePage' },
     { title: 'Tabs', component: 'TabsPage' },
     { title: 'Cards', component: 'CardsPage' },
     { title: 'Content', component: 'ContentPage' },
@@ -54,7 +53,6 @@ export class MyApp {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
       
-      var client = new WindowsAzure.MobileServiceClient('https://iliftbro.azurewebsites.net');
     });
 
     this.initTranslate();

@@ -9,6 +9,53 @@
 <ion-content>
 
   <form [formGroup]="form" *ngIf="settingsReady">
+    <!-- Basic info inputs -->
+    <ion-list padding>
+      <h2 style="line-height: 0em;padding-top:1em;">Body information</h2>
+      <p>This data is used to generate statistics regarding your body type in relation to weight lifting.</p>
+
+      <ion-item>
+        <ion-label fixed>Height(cm)</ion-label>
+        <ion-input type="number"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>Weight(kg)</ion-label>
+        <ion-input type="number" value=""></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <!-- Max repetition inputs -->
+    <ion-list padding>
+      <h2 style="line-height: 0em;padding-top:1em;">Max repetition</h2>
+      <p>Fill in your weight for a max repetition for each of the lifts below, in <b>kilograms</b>.</p>
+
+      <ion-item>
+        <ion-label fixed>Squat</ion-label>
+        <ion-input type="number"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>Bench press</ion-label>
+        <ion-input type="number" value=""></ion-input>
+      </ion-item>
+
+      <ion-item id="rounded">
+        <ion-label fixed>Deadlift</ion-label>
+        <ion-input type="number"></ion-input>
+      </ion-item>
+    </ion-list>
+
+
+
+
+
+
+
+
+
+
+    <!-- Kolla hur dessa funkar sedan -->
     <ion-list *ngIf="page == 'main'">
       <ion-item>
         <ion-label>{{ 'SETTINGS_OPTION1' | translate }}</ion-label>
@@ -40,6 +87,6 @@
         <ion-input formControlName="option4"></ion-input>
       </ion-item>
     </ion-list>
-  </form>
 
+  </form>
 </ion-content>

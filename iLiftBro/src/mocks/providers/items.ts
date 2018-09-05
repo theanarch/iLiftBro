@@ -7,48 +7,43 @@ export class Items {
   items: Item[] = [];
 
   defaultItem: any = {
-    "name": "Burt Bear",
+    "week": "Burt Bear",
     "profilePic": "assets/img/speakers/bear.jpg",
-    "about": "Burt is a Bear.",
+    "weekDescription": "Burt is a Bear.",
   };
 
 
   constructor() {
     let items = [
       {
-        "name": "Burt Bear",
+        "week": "1",
         "profilePic": "assets/img/speakers/bear.jpg",
-        "about": "Burt is a Bear."
+        "weekDescription": "Muscular Conditioning"
       },
       {
-        "name": "Charlie Cheetah",
+        "week": "2",
         "profilePic": "assets/img/speakers/cheetah.jpg",
-        "about": "Charlie is a Cheetah."
+        "weekDescription": "Conditioning/Hypertrophy"
       },
       {
-        "name": "Donald Duck",
+        "week": "3",
         "profilePic": "assets/img/speakers/duck.jpg",
-        "about": "Donald is a Duck."
+        "weekDescription": "Linear Max OT Phase"
       },
       {
-        "name": "Eva Eagle",
+        "week": "4",
         "profilePic": "assets/img/speakers/eagle.jpg",
-        "about": "Eva is an Eagle."
+        "weekDescription": "Heavy Weight Acclimation"
       },
       {
-        "name": "Ellie Elephant",
+        "week": "5",
         "profilePic": "assets/img/speakers/elephant.jpg",
-        "about": "Ellie is an Elephant."
+        "weekDescription": "High Intensity Strength"
       },
       {
-        "name": "Molly Mouse",
+        "week": "6",
         "profilePic": "assets/img/speakers/mouse.jpg",
-        "about": "Molly is a Mouse."
-      },
-      {
-        "name": "Paul Puppy",
-        "profilePic": "assets/img/speakers/puppy.jpg",
-        "about": "Paul is a Puppy."
+        "weekDescription": "¡End Game!"
       }
     ];
 
