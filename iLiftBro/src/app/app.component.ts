@@ -6,6 +6,7 @@ import { Config, Nav, Platform } from 'ionic-angular';
 
 import { FirstRunPage } from '../pages';
 import { Settings } from '../providers';
+import azureMobileClient from 'azure-mobile-apps-client';
 
 @Component({
   template: `<ion-menu [content]="content">
@@ -26,6 +27,7 @@ import { Settings } from '../providers';
   </ion-menu>
   <ion-nav #content [root]="rootPage"></ion-nav>`
 })
+
 export class MyApp {
   rootPage = FirstRunPage;
 
@@ -51,7 +53,10 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      
+      var client = new WindowsAzure.MobileServiceClient('https://iliftbro.azurewebsites.net');
     });
+
     this.initTranslate();
   }
 
