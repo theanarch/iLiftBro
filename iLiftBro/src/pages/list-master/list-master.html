@@ -13,26 +13,29 @@
 </ion-header>
 
 <ion-content padding>
+
   <div class="weekList">
+
     <ion-list>
 
-      <div>
-        <ion-item-sliding class="eachitem" *ngFor="let item of currentItems">
-          <ion-item class="week" id={{item.week}} (click)="openItem(item)">
-            <h2>Week {{item.week}}</h2>
-            <p>{{item.weekDescription}}</p>
-          </ion-item>
-          <ion-item-options side="right">
-            <button ion-button
-                   (click)="doneButton(item.week)"
-                    color="secondary" 
-              small>Done
+      <ion-item-sliding class="eachitem" *ngFor="let item of currentItems">
+        <ion-item class="week" id={{item.week}} (click)="openItem(item)">
+          <h2>Week {{item.week}}</h2>
+          <p>{{item.weekDescription}}</p>
+          <ion-icon class="arrow" name="ios-arrow-back" item-end></ion-icon>
+        </ion-item>
+        <ion-item-options class="btn" side="right">
+          <div >
+            <button ion-button small (click)="doneButton(item.week)" color="secondary">
+              Done
             </button>
+          </div>
           </ion-item-options>
-        </ion-item-sliding>
-      </div>
+      </ion-item-sliding>
 
     </ion-list>
+
   </div>
-  
+
+
 </ion-content>

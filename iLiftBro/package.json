@@ -8,8 +8,7 @@
     "start": "ionic-app-scripts serve",
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
-    "lint": "ionic-app-scripts lint",
-    "chart": "../node_modules/chart.js/dist/Chart.js"
+    "lint": "ionic-app-scripts lint"
   },
   "dependencies": {
     "@angular/animations": "5.2.11",
