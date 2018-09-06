@@ -13,19 +13,26 @@
 </ion-header>
 
 <ion-content padding>
-<div class="weekList">
-  <ion-list>
-    <div *ngFor="let item of currentItems">
-      <ion-item class="week" (click)="openItem(item)">
-        <ion-avatar item-start>
-          <!-- <img src="img/thumbnail-totoro.png"> -->
-          <img [src]="item.profilePic" />
-        </ion-avatar>
-        <h2>Week {{item.week}}</h2>
-        <p>{{item.weekDescription}}</p>
-        <button ion-button clear item-end>go kick it!</button>
-      </ion-item>
-    </div>
+  <div class="weekList">
+    <ion-list>
+
+      <div>
+        <ion-item-sliding class="eachitem" *ngFor="let item of currentItems">
+          <ion-item class="week" id={{item.week}} (click)="openItem(item)">
+            <h2>Week {{item.week}}</h2>
+            <p>{{item.weekDescription}}</p>
+          </ion-item>
+          <ion-item-options side="right">
+            <button ion-button
+                   (click)="doneButton(item.week)"
+                    color="secondary" 
+              small>Done
+            </button>
+          </ion-item-options>
+        </ion-item-sliding>
+      </div>
+
     </ion-list>
   </div>
+  
 </ion-content>

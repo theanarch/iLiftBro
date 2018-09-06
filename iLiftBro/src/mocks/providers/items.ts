@@ -7,9 +7,9 @@ export class Items {
   items: Item[] = [];
 
   defaultItem: any = {
-    "week": "Burt Bear",
+    "week": "Week X",
     "profilePic": "assets/img/speakers/bear.jpg",
-    "weekDescription": "Burt is a Bear.",
+    "weekDescription": "Some description",
   };
 
 
