@@ -15,4 +15,8 @@
     <h1>Week {{item.week}}</h1>
     <h4>{{item.weekDescription}}</h4>
   </div>
+
+  <div>
+    <p *ngFor="let t from tests">{{t.FIELD}}</p>
+  </div>
 </ion-content>

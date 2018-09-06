@@ -9,9 +9,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class StatisticsPage {
 
+public data2 : {};
+
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
-    this.data = {
+    this.data2 = {
       labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6'],
       datasets: [
         {
@@ -22,7 +25,7 @@ export class StatisticsPage {
         },
         {
           label: 'Projected',
-          data: [28, 48, 40, 19, 86, 90],
+          data: [70, 60, 100, 90, 60, 60],          
           fill: false,
           borderColor: '#565656'
         }
