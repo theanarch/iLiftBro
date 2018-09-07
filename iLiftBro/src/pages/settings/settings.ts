@@ -4,7 +4,10 @@ import { TranslateService } from '@ngx-translate/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { Settings } from '../../providers';
-import { ListMasterPage } from '../list-master/list-master';
+import { TabsPage } from '../../pages/tabs/tabs';
+
+// C:\Projects\iLiftBro\iLiftBro\src\pages\index.ts
+
 
 /**
  * The Settings page is a simple form that syncs with a Settings provider
@@ -41,7 +44,7 @@ export class SettingsPage {
     public formBuilder: FormBuilder,
     public navParams: NavParams,
     public translate: TranslateService) {
-    this.pushPage = ListMasterPage;
+    this.pushPage = TabsPage;
   }
 
   _buildForm() {

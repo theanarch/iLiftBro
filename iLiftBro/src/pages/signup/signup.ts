@@ -53,10 +53,14 @@ export class SignupPage {
     }
   }
 
-  signUpSuccess() {
+  
+  async signUpSuccess() {
     this.displayAlert('Your account was', ' registered for this email address');
-    this.afAuth.auth.signInWithEmailAndPassword(this.account.email, this.account.password)
+    await this.afAuth.auth.signInWithEmailAndPassword(this.account.email, this.account.password)
       .then(res => this.navCtrl.setRoot(Tab3Root))
       .catch(err => this.displayAlert('Error!', err));
+
+    let user = firebase.auth().currentUser;
+    user.sendEmailVerification();
   }
 }
