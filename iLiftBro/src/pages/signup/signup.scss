@@ -1,3 +1,11 @@
 page-signup {
 
+    text-align: center;
+    ion-input{
+        color: color($colors, dark);
+    }
+
+    p{
+        color: color($colors, dark);        
+    }
 }

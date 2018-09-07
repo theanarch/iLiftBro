@@ -13,6 +13,10 @@ import { Items } from '../mocks/providers/items';
 import { Settings, User, Api } from '../providers';
 import { MyApp } from './app.component';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
 export function createTranslateLoader(http: HttpClient) {
@@ -34,6 +38,16 @@ export function provideSettings(storage: Storage) {
   });
 }
 
+
+export const fireBaseConfig = {
+  apiKey: "AIzaSyC2pcKmzoDsTVTYyz4He8EYqgth-r15bk0",
+  authDomain: "iliftbro-b1145.firebaseapp.com",
+  databaseURL: "https://iliftbro-b1145.firebaseio.com",
+  storageBucket: "iliftbro-b1145.appspot.com",
+  messagingSenderId: '957902602600' 
+};
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -41,6 +55,9 @@ export function provideSettings(storage: Storage) {
   imports: [
     BrowserModule,
     HttpClientModule,
+    AngularFireModule.initializeApp(fireBaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

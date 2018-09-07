@@ -5,10 +5,6 @@ export const FirstRunPage = 'TabsPage';
 // Change this if not using tabs
 export const MainPage = 'TabsPage';
 
-// The page that the user will be routed to after doing a sign up.
-export const AfterSignUpPage = 'SettingsPage';
-
-
 // The initial root pages for our tabs (remove if not using tabs)
 export const Tab1Root = 'ListMasterPage';
 export const Tab2Root = 'StatisticsPage';

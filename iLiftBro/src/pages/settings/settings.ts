@@ -4,6 +4,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { Settings } from '../../providers';
+import { ListMasterPage } from '../list-master/list-master';
 
 /**
  * The Settings page is a simple form that syncs with a Settings provider
@@ -13,7 +14,7 @@ import { Settings } from '../../providers';
 @IonicPage()
 @Component({
   selector: 'page-settings',
-  templateUrl: 'settings.html'
+  templateUrl: 'settings.html',
 })
 export class SettingsPage {
   // Our local settings object
@@ -33,12 +34,14 @@ export class SettingsPage {
   pageTitle: string;
 
   subSettings: any = SettingsPage;
+  pushPage: any;
 
   constructor(public navCtrl: NavController,
     public settings: Settings,
     public formBuilder: FormBuilder,
     public navParams: NavParams,
     public translate: TranslateService) {
+    this.pushPage = ListMasterPage;
   }
 
   _buildForm() {

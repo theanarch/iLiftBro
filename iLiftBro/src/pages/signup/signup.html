@@ -8,7 +8,7 @@
 
 
 <ion-content>
-  <form (submit)="doSignup()">
+  <!-- <form (submit)="doSignup()"> -->
     <ion-list>
 
       <ion-item>
@@ -35,13 +35,18 @@
         <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
       </ion-item>
 
-      <div padding>
+      <!-- <div padding>
         <button ion-button color="primary" block>{{ 'SIGNUP_BUTTON' | translate }}</button>
+      </div> -->
+
+      <div padding>
+        <p>Register an account with a valid email address</p>
+        <button ion-button full color="danger" (click)="signUpAccount()" block>{{ 'SIGNUP_BUTTON' | translate }}</button>
       </div>
 
     </ion-list>
 
 
-  </form>  
+  <!-- </form>   -->
 
 </ion-content>
