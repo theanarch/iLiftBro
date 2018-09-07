@@ -23,9 +23,6 @@ export class SignupPage {
     password: ''
   };
 
-    // Our translated text strings
-    // private signupErrorString: string;
-
     constructor(public navCtrl: NavController,
       public user: User,
       public toastCtrl: ToastController,
@@ -33,29 +30,7 @@ export class SignupPage {
       public navParams: NavParams,
       public alertCtrl: AlertController,
       private afAuth: AngularFireAuth) {
-
-    // this.translateService.get('SIGNUP_ERROR').subscribe((value) => {
-    //   this.signupErrorString = value;
-    // })
   }
-
-  // doSignup() {
-  //   // Attempt to login in through our User service MainPage
-  //   this.user.signup(this.account).subscribe((resp) => {
-  //     this.navCtrl.push(MainPage);
-  //   }, (err) => {
-
-  //     this.navCtrl.push(MainPage);
-
-  //     // Unable to sign up
-  //     let toast = this.toastCtrl.create({
-  //       message: this.signupErrorString,
-  //       duration: 3000,
-  //       position: 'top'
-  //     });
-  //     toast.present();
-  //   });
-  // }
 
   displayAlert(alertTitle, alertSub) {
     let theAlert = this.alertCtrl.create({
