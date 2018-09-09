@@ -13,7 +13,7 @@ import { TabsPage } from './tabs';
     TranslateModule.forChild()
   ],
   exports: [
-    TabsPage
+    TabsPage,
   ]
 })
 export class TabsPageModule { }

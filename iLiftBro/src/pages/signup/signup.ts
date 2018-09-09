@@ -23,13 +23,13 @@ export class SignupPage {
     password: ''
   };
 
-    constructor(public navCtrl: NavController,
-      public user: User,
-      public toastCtrl: ToastController,
-      public translateService: TranslateService,
-      public navParams: NavParams,
-      public alertCtrl: AlertController,
-      private afAuth: AngularFireAuth) {
+  constructor(public navCtrl: NavController,
+    public user: User,
+    public toastCtrl: ToastController,
+    public translateService: TranslateService,
+    public navParams: NavParams,
+    public alertCtrl: AlertController,
+    private afAuth: AngularFireAuth) {
   }
 
   displayAlert(alertTitle, alertSub) {
@@ -53,7 +53,6 @@ export class SignupPage {
     }
   }
 
-  
   async signUpSuccess() {
     this.displayAlert('Your account was', ' registered for this email address');
     await this.afAuth.auth.signInWithEmailAndPassword(this.account.email, this.account.password)

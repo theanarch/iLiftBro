@@ -5,7 +5,6 @@ import { Item } from '../../models/item';
 import { Items } from '../../providers';
 
 
-
 @IonicPage()
 @Component({
   selector: 'page-list-master',

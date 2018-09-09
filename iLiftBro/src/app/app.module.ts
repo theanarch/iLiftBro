@@ -38,7 +38,6 @@ export function provideSettings(storage: Storage) {
   });
 }
 
-
 export const fireBaseConfig = {
   apiKey: "AIzaSyC2pcKmzoDsTVTYyz4He8EYqgth-r15bk0",
   authDomain: "iliftbro-b1145.firebaseapp.com",

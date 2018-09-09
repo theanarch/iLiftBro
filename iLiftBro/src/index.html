@@ -12,11 +12,12 @@
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#4e8ef7">
 
+  <!-- cordova.js for cordova apps  -->
+  <script src="cordova.js"></script>
+
   <!-- add to homescreen for ios -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-
 
   <!-- un-comment this code to enable service worker
     <script>
@@ -42,8 +43,12 @@
   <!-- #### JavaScript loading #### -->
   <!-- ############################ -->
 
-  <!-- cordova.js for cordova apps  -->
-  <script src="cordova.js"></script>
+  <!-- Chart js load-->
+  <!-- <script src="../node_modules/chart.js/dist/Chart.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+
+  <!-- The "Done" button in Schedule Page -->
+  <script src="assets/scripts/doneButton.js"></script>
 
   <!-- The polyfills js is generated during the build process -->
   <script src="build/polyfills.js"></script>
@@ -55,13 +60,9 @@
   <!-- The main bundle js is generated during the build process -->
   <script src="build/main.js"></script>
 
-  <!-- Chart js load-->
-  <!-- <script src="../node_modules/chart.js/dist/Chart.min.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 
-  <!-- Done button click for ListMasterPage -->
-  <script src="assets/scripts/doneButton.js" type="application/javascript"></script>
-  
+
+
 </body>
 
 </html>

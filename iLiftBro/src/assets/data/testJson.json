@@ -1,14 +1,10 @@
-[
+{
+  "Field":
+  [
     {
-      "FIELD": "Insert from field1",
-      "FIELD": "From field2",
-      "FIELD": "Set 1",
-      "FIELD": "",
-      "FIELD": "Set 2",
-      "FIELD": "",
-      "FIELD": "Set 3",
-      "FIELD": "",
-      "FIELD": "Set 4",
-      "FIELD": "From last field"
+      "Id": "777",
+      "Name": "Lazar"
     }
-]
+  ]
+}
+
