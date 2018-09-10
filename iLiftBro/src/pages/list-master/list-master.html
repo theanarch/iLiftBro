@@ -3,11 +3,11 @@
   <ion-navbar>
     <ion-title>{{ 'LIST_MASTER_TITLE' | translate }}</ion-title>
 
-    <ion-buttons end>
+    <!-- <ion-buttons end>
       <button ion-button icon-only (click)="addItem()">
         <ion-icon name="add"></ion-icon>
       </button>
-    </ion-buttons>
+    </ion-buttons> -->
   </ion-navbar>
 
 </ion-header>
@@ -25,12 +25,12 @@
           <ion-icon class="arrow" name="ios-arrow-back" item-end></ion-icon>
         </ion-item>
         <ion-item-options class="btn" side="right">
-          <div >
+          <div>
             <button ion-button small onClick="Done(this.id)" id="button{{item.week}}" color="secondary">
               Done
             </button>
           </div>
-          </ion-item-options>
+        </ion-item-options>
       </ion-item-sliding>
 
     </ion-list>

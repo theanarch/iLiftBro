@@ -3,10 +3,8 @@ import { TranslateService } from '@ngx-translate/core';
 import { IonicPage, NavController, ToastController, NavParams, AlertController } from 'ionic-angular';
 
 import { MainPage } from '../';
-import { User, Settings } from '../../providers';
-import { Tab3Root } from '../';
+import { User } from '../../providers';
 import { AngularFireAuth } from 'angularfire2/auth';
-import * as firebase from 'firebase/app';
 
 @IonicPage()
 @Component({

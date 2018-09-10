@@ -17,32 +17,32 @@ export class Items {
     let items = [
       {
         "week": "1",
-        "profilePic": "assets/img/speakers/bear.jpg",
+        // "profilePic": "assets/img/speakers/bear.jpg",
         "weekDescription": "Muscular Conditioning"
       },
       {
         "week": "2",
-        "profilePic": "assets/img/speakers/cheetah.jpg",
+        // "profilePic": "assets/img/speakers/cheetah.jpg",
         "weekDescription": "Conditioning/Hypertrophy"
       },
       {
         "week": "3",
-        "profilePic": "assets/img/speakers/duck.jpg",
+        // "profilePic": "assets/img/speakers/duck.jpg",
         "weekDescription": "Linear Max OT Phase"
       },
       {
         "week": "4",
-        "profilePic": "assets/img/speakers/eagle.jpg",
+        // "profilePic": "assets/img/speakers/eagle.jpg",
         "weekDescription": "Heavy Weight Acclimation"
       },
       {
         "week": "5",
-        "profilePic": "assets/img/speakers/elephant.jpg",
+        // "profilePic": "assets/img/speakers/elephant.jpg",
         "weekDescription": "High Intensity Strength"
       },
       {
         "week": "6",
-        "profilePic": "assets/img/speakers/mouse.jpg",
+        // "profilePic": "assets/img/speakers/mouse.jpg",
         "weekDescription": "¡End Game!"
       }
     ];

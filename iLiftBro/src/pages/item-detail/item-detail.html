@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Week {{ item.week }}</ion-title>
+    <ion-title>Week {{item.week}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -11,12 +11,13 @@
   <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
   </div>
 
-  <div class="item-detail" padding>
+  <div class="item-detail" id=week{{item.week}} padding>
     <h1>Week {{item.week}}</h1>
     <h4>{{item.weekDescription}}</h4>
+    <ion-item *ngFor="let data of weeks">
+      {{data.Id}}
+    </ion-item>
   </div>
 
-  <div>
-    <!-- <p *ngFor="let t from tests">{{t.FIELD}}</p> -->
-  </div>
+
 </ion-content>

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { IonicPage, NavController, ToastController, NavParams, AlertController } from 'ionic-angular';
 
-import { User, Settings } from '../../providers';
+import { User } from '../../providers';
 import { Tab3Root } from '../';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
