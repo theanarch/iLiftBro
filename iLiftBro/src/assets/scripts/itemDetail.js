@@ -35,26 +35,6 @@
 
 
 function DoIt() {
-    $.getJSON("./assets/data/MyTest.json", function (json) {
-
-        for (var i = 0; i < json.length; i++) { //loops days
-            let weekdays = json[0].Days;
-            // console.log(weekdays);
-            for (var j = 0; j < weekdays.length; j++) { //loops days
-                let day = weekdays[j];
-                console.log(day);
-                for (var k = 0; k < day.Days.length; k++) { //loops days
-                    let workday = day.Days[k];
-                    console.log(workday);
-                    for(var l = 0; l < workday.length; l++){//workouts
-                        let workout = workday[l];
-                        console.log(workout);
-                        for(var m = 0; m < workday.length; m++){ //sets
-                            let workout = workday[m];
-                            console.log(workout);
-                    }
-                }
-            }
-        }
-    });
+    alert("onload funkar");
+    console.log("funbkar här");
 }
