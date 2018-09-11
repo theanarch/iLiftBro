@@ -20,7 +20,7 @@ export class ItemDetailPage {
 
   constructor(public navCtrl: NavController, navParams: NavParams, items: Items, public http: Http) {
     this.item = navParams.get('item') || items.defaultItem;
-    
+
     //Loading json file
     // var requestedWeekId = "week" + this.item.week;
     // this.ionViewDidLoad(requestedWeekId);
@@ -58,35 +58,109 @@ export class ItemDetailPage {
   // }
 
 
-populateWeek(){
-  var workoutDay = "";
+  // populateWeek() {
+  //   var workoutDay = "";
+
+  //   $.getJSON("./assets/data/MyTest.json", function (json) {
+  //     // console.log(json)
+  //     let weekdays = json[0].Days;
+  //     workoutDay += "<ng-container padding>";
+  //     for (var j = 0; j < weekdays.length; j++) { //loops days
+  //       let day = weekdays[j];
+  //       workoutDay += "<h3>Day " + (j+1) + "</h3>";
+  //       workoutDay += "<ion-grid>";
+  //       workoutDay += "<ion-row>"
+  //       workoutDay += "<ion-col col-12 col-sm>Workout</ion-col>";
+  //       workoutDay += "<ion-col col-12 col-sm>Set1</ion-col>";
+  //       workoutDay += "<ion-col col-12 col-sm>Set2</ion-col>";
+  //       workoutDay += "<ion-col col-12 col-sm>Set3</ion-col>";
+  //       workoutDay += "<ion-col col-12 col-sm>Set4</ion-col>";
+  //       workoutDay += "</ion-row>";
+  //       workoutDay += "</ion-grid >";
+  //       for (var k = 0; k < day.Days.length; k++) { //loops days
+  //         let workday = day.Days[k];
+  //         workoutDay += "<ion-grid>"
+  //         workoutDay += "<ion-row align-items-center>"
+  //         workoutDay += "<ion-col col-12 col-sm>"
+  //         workoutDay += "" + workday.Name +""
+  //         workoutDay += "</ion-col>"
+  //         workoutDay += "<ion-col col-12 col-sm>"
+  //         workoutDay += "" + workday.Set1 +""
+  //         workoutDay += "</ion-col>"
+  //         workoutDay += "<ion-col col-12 col-sm>"
+  //         workoutDay += "" + workday.Set2 +""
+  //         workoutDay += "</ion-col>"
+  //         workoutDay += "<ion-col col-12 col-sm>"
+  //         workoutDay += "" + workday.Set3 +""
+  //         workoutDay += "</ion-col>"
+  //         workoutDay += "<ion-col col-12 col-sm>"
+  //         workoutDay += "" + workday.Set4 +""
+  //         workoutDay += "</ion-col>";
+  //         workoutDay += "</ion-row>";
+  //         workoutDay += "</ion-grid>"
+  //         // console.log(workday.Name + " " + workday.Set1 + " " + workday.Set2 + " " + workday.Set3 + " " + workday.Set4);
+  //       }
+  //     }
+  //     workoutDay += "</ng-container>"
+
+  //     $('#asdf').append(workoutDay);
+  //   });
+  // }
+
+
+  populateWeek() {
+    var workoutDay = "";
 
     $.getJSON("./assets/data/MyTest.json", function (json) {
-        console.log(json)
-        let weekdays = json[0].Days;
-        for (var j = 0; j < weekdays.length; j++) { //loops days
-            let day = weekdays[j];
-            // workoutDay += "<ng-container padding>";
-            workoutDay += "<h3>Day " + j + "</h3>";
-            workoutDay += "<ion-grid>";
-            workoutDay += "<ion-row>"
-            workoutDay += "<ion-col col-3 offset-1>Workout</ion-col>";
-            workoutDay += "<ion-col col-3 offset-1>Set1</ion-col>";
-            workoutDay += "<ion-col col-3 offset-1>Set2</ion-col>";
-            workoutDay += "<ion-col col-3 offset-1>Set3</ion-col>";
-            workoutDay += "<ion-col col-3 offset-1>Set4</ion-col>";
-            workoutDay += "</ion-row>";
-            workoutDay += "</ion-grid >";
-            for (var k = 0; k < day.Days.length; k++) { //loops days
-                let workday = day.Days[k];
-                console.log(workday.Name + " " + workday.Set1 + " " + workday.Set2 + " " + workday.Set3 + " " + workday.Set4);
-            }
-        }
-        // console.log(document.getElementById('asdf'));
-        $('#asdf').append(workoutDay);
-    });
-}
+      // console.log(json)
+      let weekdays = json[0].Days;
+      workoutDay += "<ng-container>";
+      for (var j = 0; j < weekdays.length; j++) { //loops days
+        let day = weekdays[j];
+        workoutDay += "<h3>Day " + (j + 1) + "</h3>";
+        workoutDay += "<table>";
+        workoutDay += "<thead>";
+        workoutDay += "<tr>"
+        workoutDay += "<th>Workout</th>";
+        workoutDay += "<th>Set1</th>";
+        workoutDay += "<th>Set2</th>";
+        workoutDay += "<th>Set3</th>";
+        workoutDay += "<th>Set4</th>";
+        workoutDay += "</tr>";
+        workoutDay += "</thead>";
+        // workoutDay += "</ion-grid >";
+        for (var k = 0; k < day.Days.length; k++) { //loops days
+          let workday = day.Days[k];
+          workoutDay += "<tbody>";
+          workoutDay += "<tr>"
+          // workoutDay += "<ion-row align-items-center>"
+          workoutDay += "<td>"
+          workoutDay += "" + workday.Name + ""
+          workoutDay += "</td-col>"
+          workoutDay += "<td>"
+          workoutDay += "" + workday.Set1 + ""
+          workoutDay += "</td>"
+          workoutDay += "<td>"
+          workoutDay += "" + workday.Set2 + ""
+          workoutDay += "</td>"
+          workoutDay += "<td>"
+          workoutDay += "" + workday.Set3 + ""
+          workoutDay += "</td>"
+          workoutDay += "<td>"
+          workoutDay += "" + workday.Set4 + ""
+          workoutDay += "</td>";
+          workoutDay += "</tr>";
+          workoutDay += "</tbody>";
 
+          // console.log(workday.Name + " " + workday.Set1 + " " + workday.Set2 + " " + workday.Set3 + " " + workday.Set4);
+        }
+        workoutDay += "</table>"
+      }
+      workoutDay += "</ng-container>"
+
+      $('#asdf').append(workoutDay);
+    });
+  }
 
 
   ionViewDidLoad(weekId: string) {
