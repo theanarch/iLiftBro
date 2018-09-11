@@ -9,7 +9,6 @@ import { Http } from '@angular/http';
 // import { WeekDay } from '@angular/common';
 // import { File } from '@ionic-native/file';
 // import { Injectable } from '@angular/core';
-
 @IonicPage()
 @Component({
   selector: 'page-item-detail',
@@ -20,6 +19,7 @@ import { Http } from '@angular/http';
 export class ItemDetailPage {
   item: any;
   Week: any[];
+  TestJson: any[];
 
   constructor(public navCtrl: NavController, navParams: NavParams, items: Items, public http: Http) {
     this.item = navParams.get('item') || items.defaultItem;
@@ -61,13 +61,13 @@ export class ItemDetailPage {
   }
 
   ionViewDidLoad(weekId: string) {
-    var filePath = "./assets/data/"+ weekId +".json";
-    this.getJSONDataAsync(filePath).then(data => {
+    // var filePath = "./assets/data/"+ weekId +".json";
+    this.getJSONDataAsync("./assets/data/MyTest.json").then(data => {
       this.SetQueryOptionsData(data);
     });
   }
 
   SetQueryOptionsData(data: any) {
-    this.Week = data.Week;
+    this.TestJson = data;
   }
 }

@@ -9,7 +9,9 @@
 
 <ion-content>
 
-
+  <div id="megasuper">
+    
+  </div>
   <!-- <div class="item-detail" id=week{{item.week}} padding>
     <h1>Week {{item.week}}</h1>
     <h4>{{item.weekDescription}}</h4>
@@ -26,9 +28,18 @@
 
 
 
-<div *ngFor="let day of Week" padding>
-    <div>Day 1</div>
-    <ion-grid *ngFor="let s of day.Day1">
+  <!-- <ng-container *ngFor="let day of TestJson" padding>
+    <h3>Day {{day.Day.Id}}</h3>
+    <ion-grid class="sets">
+      <ion-row>
+        <ion-col>Workout</ion-col>
+        <ion-col>Set1</ion-col>
+        <ion-col>Set2</ion-col>
+        <ion-col>Set3</ion-col>
+        <ion-col>Set4</ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid *ngFor="let s of day.Day">
       <ion-row align-items-center>
         <ion-col>
           <div>{{s.Workout}}</div>
@@ -47,10 +58,20 @@
         </ion-col>
       </ion-row>
     </ion-grid>
-  </div>
+  </ng-container> -->
 
-  <div *ngFor="let day of Week" padding>
-    <div>Day 2</div>
+
+  <!-- <div *ngFor="let day of Week" padding>
+    <div *ngIf="day.Day2.Id != 2">Day 2</div>
+    <ion-grid class="sets">
+        <ion-row>
+          <ion-col>Workout</ion-col>
+          <ion-col>Set1</ion-col>
+          <ion-col>Set2</ion-col>
+          <ion-col>Set3</ion-col>
+          <ion-col>Set4</ion-col>
+        </ion-row>
+      </ion-grid>
     <ion-grid *ngFor="let s of day.Day2">
       <ion-row align-items-center>
         <ion-col>
@@ -72,5 +93,101 @@
     </ion-grid>
   </div>
 
+  <div *ngFor="let day of Week" padding>
+    <div *ngIf="day.Day3.Id != 3">Day 3</div>
+    <ion-grid class="sets">
+        <ion-row>
+          <ion-col>Workout</ion-col>
+          <ion-col>Set1</ion-col>
+          <ion-col>Set2</ion-col>
+          <ion-col>Set3</ion-col>
+          <ion-col>Set4</ion-col>
+        </ion-row>
+      </ion-grid>
+    <ion-grid *ngFor="let s of day.Day3">
+      <ion-row align-items-center>
+        <ion-col>
+          <div>{{s.Workout}}</div>
+        </ion-col>
+        <ion-col>
+          <div>{{s.Set1}}</div>
+        </ion-col>
+        <ion-col>
+          <div>{{s.Set2}}</div>
+        </ion-col>
+        <ion-col>
+          <div>{{s.Set3}}</div>
+        </ion-col>
+        <ion-col>
+          <div>{{s.Set4}}</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div *ngFor="let day of Week" padding>
+    <div *ngIf="day.Day4.Id != 4">Day 4</div>
+    <ion-grid class="sets">
+        <ion-row>
+          <ion-col>Workout</ion-col>
+          <ion-col>Set1</ion-col>
+          <ion-col>Set2</ion-col>
+          <ion-col>Set3</ion-col>
+          <ion-col>Set4</ion-col>
+        </ion-row>
+      </ion-grid>
+    <ion-grid *ngFor="let s of day.Day4">
+      <ion-row align-items-center>
+        <ion-col>
+          <div>{{s.Workout}}</div>
+        </ion-col>
+        <ion-col>
+          <div>{{s.Set1}}</div>
+        </ion-col>
+        <ion-col>
+          <div>{{s.Set2}}</div>
+        </ion-col>
+        <ion-col>
+          <div>{{s.Set3}}</div>
+        </ion-col>
+        <ion-col>
+          <div>{{s.Set4}}</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+
+  <div *ngFor="let day of Week" padding>
+    <div *ngIf="day.Day5.Id != 5">Day 5</div>
+    <ion-grid class="sets">
+        <ion-row>
+          <ion-col>Workout</ion-col>
+          <ion-col>Set1</ion-col>
+          <ion-col>Set2</ion-col>
+          <ion-col>Set3</ion-col>
+          <ion-col>Set4</ion-col>
+        </ion-row>
+      </ion-grid>
+    <ion-grid *ngFor="let s of day.Day5">
+      <ion-row align-items-center>
+        <ion-col>
+          <div>{{s.Workout}}</div>
+        </ion-col>
+        <ion-col>
+          <div>{{s.Set1}}</div>
+        </ion-col>
+        <ion-col>
+          <div>{{s.Set2}}</div>
+        </ion-col>
+        <ion-col>
+          <div>{{s.Set3}}</div>
+        </ion-col>
+        <ion-col>
+          <div>{{s.Set4}}</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div> -->
 
 </ion-content>

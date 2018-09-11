@@ -1,21 +1,27 @@
 {
   "Week":
     [{
-      "Day1":  [{"Workout": "Squat","Set1":"95/x6","Set2":"95/x6","Set3":"95/x6","Set4":"95/x6"}, {"Workout": "Deadlift", "Set1":"135/x6","Set2":"135/x6","Set3":"-","Set4":"-"}],
-      "Day2":  [{"Workout": "Bench Press","Set1":"45/x10","Set2":"60/x10","Set3":"67.5/x8","Set4":"70/x6"}, 
-                {"Workout": "Machine Row", "Set1":"-/x10","Set2":"-/x10","Set3":"-/x8","Set4":"-/x6"},
-                {"Workout": "Seated Dumbbell OHP", "Set1":"-/x12","Set2":"-/x12","Set3":"-/x10","Set4":"-/x8"},
-                {"Workout": "Lat Pulldown", "Set1":"-/x12","Set2":"-/x12","Set3":"-/x10","Set4":"-/x8"}],
-      "Day3":  [{"Workout": "Bench Press",  "Set1":"45/x10","Set2":"60/x10", "Set3":"67.5/x8", "Set4":"70/x6"},
-                {"Workout": "Machine Row", "Set1":"-/x10","Set2":"-/x10", "Set3":"-/x8", "Set4":"-/x6"},
-                {"Workout": "Seated Dumbbell OHP", "Set1":"-/x12", "Set2":"-/x12", "Set3":"-/x10", "Set4":"-/x8"},
-                {"Workout": "Lat Pulldown", "Set1":"-/x12", "Set2":"-/x12", "Set3":"-/x10", "Set4":"-/x6"}],
-      "Day4":  [{"Workout": "Squat", "Set1":"85/x8", "Set2":"85/x8", "Set3":"85/x8", "Set4":"85/x8"},
+      "Day1":  [{"Id":"1"},
+                {"Workout": "Squat","Set1":"95/x6","Set2":"95/x6","Set3":"95/x6","Set4":"95/x6"}, 
+                {"Workout": "Deadlift", "Set1":"135/x6","Set2":"135/x6","Set3":"-","Set4":"-"}],
+      "Day2":  [{"Id":"2"},
+                {"Workout": "Bench Press","Set1":"45/x10","Set2":"60/x10","Set3":"67.5/x8","Set4":"70/x6"}, 
+                {"Workout": "Machine Row", "Set1":"0/x10","Set2":"0/x10","Set3":"0/x8","Set4":"0/x6"},
+                {"Workout": "Seated Dumbbell OHP", "Set1":"0/x12","Set2":"-/x12","Set3":"-/x10","Set4":"0/x8"},
+                {"Workout": "Lat Pulldown", "Set1":"0/x12","Set2":"0/x12","Set3":"0/x10","Set4":"0/x8"}],
+      "Day3":  [{"Id":"3"},
+                {"Workout": "Bench Press",  "Set1":"45/x10","Set2":"60/x10", "Set3":"67.5/x8", "Set4":"70/x6"},
+                {"Workout": "Machine Row", "Set1":"0/x10","Set2":"0/x10", "Set3":"0/x8", "Set4":"0/x6"},
+                {"Workout": "Seated Dumbbell OHP", "Set1":"0/x12", "Set2":"0/x12", "Set3":"0/x10", "Set4":"0/x8"},
+                {"Workout": "Lat Pulldown", "Set1":"0/x12", "Set2":"0/x12", "Set3":"0/x10", "Set4":"0/x6"}],
+      "Day4":  [{"Id":"4"},
+                {"Workout": "Squat", "Set1":"85/x8", "Set2":"85/x8", "Set3":"85/x8", "Set4":"85/x8"},
                 {"Workout": "Deadlift", "Set1":"120/x8", "Set2":"120/x8", "Set3":"-", "Set4":"-"}],
-      "Day5":  [{"Workout": "Bench Press", "Set1":"72.5/xMR", "Set2":"-", "Set3":"-","Set4":"-"},
-                {"Workout": "Machine Row", "Set1":"-/x10", "Set2":"-/x10", "Set3":"-/x8", "Set4":"-/x6"},
-                {"Workout":"Seated Dumbbell OHP", "Set1":"-/x12", "Set2":"-/x12", "Set3":"-/x10", "Set4":"-/x8"},
-                {"Workout":"Lat Pulldown", "Set1":"-/x12", "Set2":"-/x12", "Set3":"-/x10", "Set4":"-/x8"}]
+      "Day5":  [{"Id":"5"},
+                {"Workout": "Bench Press", "Set1":"72.5/xMR", "Set2":"-", "Set3":"-","Set4":"-"},
+                {"Workout": "Machine Row", "Set1":"0/x10", "Set2":"0/x10", "Set3":"0/x8", "Set4":"0/x6"},
+                {"Workout":"Seated Dumbbell OHP", "Set1":"0/x12", "Set2":"0/x12", "Set3":"0/x10", "Set4":"0/x8"},
+                {"Workout":"Lat Pulldown", "Set1":"0/x12", "Set2":"0/x12", "Set3":"0/x10", "Set4":"0/x8"}]
       }]
 }
 

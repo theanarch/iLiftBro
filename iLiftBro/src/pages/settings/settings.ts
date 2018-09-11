@@ -6,6 +6,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Settings } from '../../providers';
 import { TabsPage } from '../../pages/tabs/tabs';
 
+
 // C:\Projects\iLiftBro\iLiftBro\src\pages\index.ts
 
 
