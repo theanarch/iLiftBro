@@ -8,15 +8,68 @@
 
 
 <ion-content>
-  <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
-  </div>
 
-  <div class="item-detail" id=week{{item.week}} padding>
+
+  <!-- <div class="item-detail" id=week{{item.week}} padding>
     <h1>Week {{item.week}}</h1>
     <h4>{{item.weekDescription}}</h4>
-    <ion-item *ngFor="let data of weeks">
-      {{data.Id}}
-    </ion-item>
+    <p></p>
+  </div> -->
+
+  <!-- <template *ngFor="let days of Week">
+    <template *ngFor="let day of days">
+    <template *ngFor="let exer of day">
+      {{exer.Squat}}
+    </template>
+  </template>
+</template> -->
+
+
+
+<div *ngFor="let day of Week" padding>
+    <div>Day 1</div>
+    <ion-grid *ngFor="let s of day.Day1">
+      <ion-row align-items-center>
+        <ion-col>
+          <div>{{s.Workout}}</div>
+        </ion-col>
+        <ion-col>
+          <div>{{s.Set1}}</div>
+        </ion-col>
+        <ion-col>
+          <div>{{s.Set2}}</div>
+        </ion-col>
+        <ion-col>
+          <div>{{s.Set3}}</div>
+        </ion-col>
+        <ion-col>
+          <div>{{s.Set4}}</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div *ngFor="let day of Week" padding>
+    <div>Day 2</div>
+    <ion-grid *ngFor="let s of day.Day2">
+      <ion-row align-items-center>
+        <ion-col>
+          <div>{{s.Workout}}</div>
+        </ion-col>
+        <ion-col>
+          <div>{{s.Set1}}</div>
+        </ion-col>
+        <ion-col>
+          <div>{{s.Set2}}</div>
+        </ion-col>
+        <ion-col>
+          <div>{{s.Set3}}</div>
+        </ion-col>
+        <ion-col>
+          <div>{{s.Set4}}</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
 
 
