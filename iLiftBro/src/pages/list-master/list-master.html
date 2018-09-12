@@ -26,7 +26,7 @@
         </ion-item>
         <ion-item-options class="btn" side="right">
           <div>
-            <button ion-button small onClick="Done(this.id)" id="button{{item.week}}" color="secondary">
+            <button ion-button small (click)="Done($event)" id="button{{item.week}}" [color]="buttonColor">
               Done
             </button>
           </div>

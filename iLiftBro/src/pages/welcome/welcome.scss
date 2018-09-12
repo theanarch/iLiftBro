@@ -1,13 +1,12 @@
 page-welcome {
   .splash-bg {
     position: relative;
-    // url('../assets/img/splashbg.png') no-repeat transparent;
-    background: white;
+    background: url('../assets/img/arnoldbicep.png') no-repeat;
     background-size: cover;
     height: 45%;
     z-index: 1;
     background-repeat: repeat-x;
-    animation: animatedBackground 40s linear infinite;
+    animation: animatedBackground 10s alternate infinite;
   }
 
   @keyframes animatedBackground {

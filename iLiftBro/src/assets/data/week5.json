@@ -1,15 +1,82 @@
-{
-      "Week": [
-            {
-      "Day1":[{"Workout": "Squat", "Set1": "195/x1-4", "Set2": "-", "Set3": "-", "Set4": "-"},
-              {"Workout": "Deadlift","Set1": "135/x4","Set2": "145/x4","Set3": "155/x2","Set4": "-"}],
-      
-      "Day2": [{"Workout": "Bench Press","Set1": "85/x1-4","Set2": "-","Set3": "-","Set4": "-"},
-               {"Workout": "Dumbbell Row","Set1": "0/x8","Set2": "0/x6","Set3": "0/x6","Set4": "-"},
-               {"Workout": "Standing Dumbbell OHP","Set1": "0/x8","Set2": "0/x6","Set3": "0/x6","Set4": "-"},
-               {"Workout": "Weighted Pull-up","Set1": "0/x8","Set2": "0/x6","Set3": "0/x6","Set4": "-"}],
-      
-      "Day3": [{"Workout": "Deadlift","Set1": "100/x1-4","Set2": "-","Set3": "-","Set4": "-"}]
-    }
-  ]
-}
+[
+  {
+    "Id": 0,
+    "Name": "week5",
+    "Days": [
+      {
+        "Id": 0,
+        "Name": "Day1",
+        "Days": [
+          {
+            "Id": 0,
+            "Name": "Squat",
+            "Set1": "x1-4",
+            "Set2": "-",
+            "Set3": "-",
+            "Set4": "-"
+          },
+          {
+            "Id": 0,
+            "Name": "Deadlift",
+            "Set1": "x1-4",
+            "Set2": "x1-4",
+            "Set3": "x1-4",
+            "Set4": "-"
+          }
+        ]
+      },
+      {
+        "Id": 0,
+        "Name": "Day2",
+        "Days": [
+          {
+            "Id": 0,
+            "Name": "Bench Press",
+            "Set1": "x1-4",
+            "Set2": "-",
+            "Set3": "-",
+            "Set4": "-"
+          },
+          {
+            "Id": 0,
+            "Name": "Dumbbell Row",
+            "Set1": "x1-4",
+            "Set2": "x1-4",
+            "Set3": "x1-4",
+            "Set4": "-"
+          },
+          {
+            "Id": 0,
+            "Name": "Standing Dumbbell OHP",
+            "Set1": "x1-4",
+            "Set2": "x1-4",
+            "Set3": "x1-4",
+            "Set4": "-"
+          },
+          {
+            "Id": 0,
+            "Name": "Standing Dumbbell OHP",
+            "Set1": "x4",
+            "Set2": "x4",
+            "Set3": "x4",
+            "Set4": "-"
+          }
+        ]
+      },
+      {
+        "Id": 0,
+        "Name": "Day3",
+        "Days": [
+          {
+            "Id": 0,
+            "Name": "Squat",
+            "Set1": "x1-4",
+            "Set2": "-",
+            "Set3": "-",
+            "Set4": "-"
+          }
+        ]
+      }
+    ]
+  }
+]
