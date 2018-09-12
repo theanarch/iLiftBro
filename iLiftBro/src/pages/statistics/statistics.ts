@@ -7,8 +7,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'statistics.html',
 })
 export class StatisticsPage {
+  public typo: string = 'scheisse';
 
-public data2 : {};
+  public data2: {};
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
@@ -24,7 +25,7 @@ public data2 : {};
         },
         {
           label: 'Projected',
-          data: [70, 60, 100, 90, 60, 60],          
+          data: [70, 60, 100, 90, 60, 60],
           fill: false,
           borderColor: '#565656'
         }
@@ -34,7 +35,7 @@ public data2 : {};
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad StatisticsPage');
+    this.typo = localStorage.getItem("Height") + localStorage.getItem("Weight");
   }
 
 }

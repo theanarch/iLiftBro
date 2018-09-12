@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 
 import { Settings } from '../../providers';
 import { TabsPage } from '../../pages/tabs/tabs';
@@ -12,11 +12,10 @@ import { TabsPage } from '../../pages/tabs/tabs';
   templateUrl: 'settings.html',
 })
 export class SettingsPage {
-  // Our local settings object
   options: any;
-
+  Height: string = '';
+  shit = {};
   settingsReady = false;
-
   form: FormGroup;
 
   profileSettings = {
@@ -35,7 +34,8 @@ export class SettingsPage {
     public settings: Settings,
     public formBuilder: FormBuilder,
     public navParams: NavParams,
-    public translate: TranslateService) {
+    public translate: TranslateService,
+    public loadingCtrl: LoadingController) {
     this.pushPage = TabsPage;
   }
 
@@ -87,7 +87,23 @@ export class SettingsPage {
     });
   }
 
+  saveResult(){
+    localStorage.setItem("Height",this.shit.Height);
+    localStorage.setItem("Weight",this.shit.Weight);
+    
+    this.presentLoadingText();
+  }
+
+  presentLoadingText() {
+    let loading = this.loadingCtrl.create({
+      spinner: 'ios',
+      content: 'Processing data...',
+      duration: 3000
+    });
+  
+    loading.present();
+  }
+
   ngOnChanges() {
-    console.log('Ng All Changes');
   }
 }
