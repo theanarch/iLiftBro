@@ -1,0 +1,23 @@
+[
+  {
+    "Id": 0,
+    "Name": "week6",
+    "Days": [
+      {
+        "Id": 0,
+        "Name": "Day1",
+        "Workouts": [
+          {
+            "Id": 0,
+            "Name": "Inputs",
+            "Set1": "-",
+            "Set2": "-",
+            "Set3": "-",
+            "Set4": "-"
+          }
+        ]
+      }
+    ]
+  }
+]
+ 

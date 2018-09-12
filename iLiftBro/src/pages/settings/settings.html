@@ -47,7 +47,7 @@
     </ion-list>
 
     <div class="btn">
-      <button ion-button round outline [navPush]="pushPage">Save Changes</button>
+      <button ion-button round outline (click)=saveResult [navPush]="pushPage">Save Changes</button>
     </div>
 
 
@@ -56,7 +56,7 @@
 
 
     <!-- Kolla hur dessa funkar sedan -->
-    <ion-list *ngIf="page == 'main'">
+    <!-- <ion-list *ngIf="page == 'main'">
       <ion-item>
         <ion-label>{{ 'SETTINGS_OPTION1' | translate }}</ion-label>
         <ion-toggle formControlName="option1"></ion-toggle>
@@ -86,7 +86,7 @@
         <ion-label>{{ 'SETTINGS_OPTION4' | translate }}</ion-label>
         <ion-input formControlName="option4"></ion-input>
       </ion-item>
-    </ion-list>
+    </ion-list> -->
 
   </form>
 </ion-content>

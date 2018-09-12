@@ -1,0 +1,128 @@
+[
+  {
+    "Id": 0,
+    "Name": "week4",
+    "Days": [
+      {
+        "Id": 0,
+        "Name": "Day1",
+        "Workouts": [
+          {
+            "Id": 0,
+            "Name": "Squat",
+            "Set1": "x3",
+            "Set2": "x3",
+            "Set3": "x3",
+            "Set4": "-"
+          },
+          {
+            "Id": 0,
+            "Name": "Deadlift variation",
+            "Set1": "x6",
+            "Set2": "x6",
+            "Set3": "-",
+            "Set4": "-"
+          }
+        ]
+      },
+      {
+        "Id": 0,
+        "Name": "Day2",
+        "Workouts": [
+          {
+            "Id": 0,
+            "Name": "Bench Press",
+            "Set1": "x3",
+            "Set2": "x3",
+            "Set3": "x3",
+            "Set4": "-"
+          },
+          {
+            "Id": 0,
+            "Name": "Dumbbell Row",
+            "Set1": "x10",
+            "Set2": "x10",
+            "Set3": "x8",
+            "Set4": "x6"
+          },
+          {
+            "Id": 0,
+            "Name": "Standing Dumbbell OHP",
+            "Set1": "x12",
+            "Set2": "x12",
+            "Set3": "x10",
+            "Set4": "x8"
+          },
+          {
+            "Id": 0,
+            "Name": "Weighted Pull-up",
+            "Set1": "x12",
+            "Set2": "x12",
+            "Set3": "x10",
+            "Set4": "x8"
+          }
+        ]
+      },
+      {
+        "Id": 0,
+        "Name": "Day3",
+        "Workouts": [
+          {
+            "Id": 0,
+            "Name": "Squat",
+            "Set1": "x3",
+            "Set2": "x1-2",
+            "Set3": "-",
+            "Set4": "-"
+          },
+          {
+            "Id": 0,
+            "Name": "Deadlift variation",
+            "Set1": "x3",
+            "Set2": "x1-2",
+            "Set3": "-",
+            "Set4": "-"
+          }
+        ]
+      },
+      {
+        "Id": 0,
+        "Name": "Day4",
+        "Workouts": [
+          {
+            "Id": 0,
+            "Name": "Bench Press",
+            "Set1": "x3",
+            "Set2": "x2-4",
+            "Set3": "x1-2",
+            "Set4": "-"
+          },
+          {
+            "Id": 0,
+            "Name": "Dumbell Row",
+            "Set1": "x10",
+            "Set2": "x10",
+            "Set3": "x8",
+            "Set4": "x6"
+          },
+          {
+            "Id": 0,
+            "Name": "Standing Dumbbell OHP",
+            "Set1": "x12",
+            "Set2": "x12",
+            "Set3": "x10",
+            "Set4": "x8"
+          },
+          {
+            "Id": 0,
+            "Name": "Weighted Pull-up",
+            "Set1": "x12",
+            "Set2": "x12",
+            "Set3": "x10",
+            "Set4": "x8"
+          }
+        ]
+      }
+    ]
+  }
+]

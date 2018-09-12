@@ -17,21 +17,33 @@ export class ItemDetailPage {
   Week: any[];
   TestJson: any[];
 
-
   constructor(public navCtrl: NavController, navParams: NavParams, items: Items, public http: Http) {
     this.item = navParams.get('item') || items.defaultItem;
     var requestedWeekId = "week" + this.item.week;
-    this.ionViewDidLoad(requestedWeekId);
+    this.populateWeek(requestedWeekId);
+
+    // this.ionViewDidLoad(requestedWeekId);
   }
 
-  public weightCalc(week: string, day: string, workout: string): string 
+  private RoundTo(calcWeight: number)
   {
-    
-    return "funkar!!";
+    let roundTo = 2.5;
+    return roundTo * Math.round(calcWeight*0.8*roundTo);
+  }
+
+  public weightCalc(week: string, day: string, workout: string, set: number): string 
+  {
+    let calculatedWeight;
+    // calculatedWeight
+
+    return "80";
   }
 
   populateWeek(requestedWeekId: string) {
+    console.log(requestedWeekId.toString());
     var filePath = "./assets/data/"+ requestedWeekId +".json";
+
+    // var filePath = "./assets/data/week1.json";
 
     //variable declaration
     var workoutDay = "";
@@ -39,12 +51,12 @@ export class ItemDetailPage {
     var dayName = "";
     var workoutName = "";
 
-    let weightCalc = (week: string, day: string, workout: string) => {
+    let weightCalc = (week: string, day: string, workout: string, set: number) => {
       if (workout != 'Squat' && workout != 'Bench Press' && workout != 'Deadlift') {
         return ' ';
       }
       else {
-        return this.weightCalc(week, day, workout);
+        return this.weightCalc(week, day, workout, set);
       }
     }
 
@@ -68,26 +80,30 @@ export class ItemDetailPage {
         workoutDay += "<th>Set4</th>";
         workoutDay += "</tr>";
         workoutDay += "</thead>";
-        for (var k = 0; k < day.Days.length; k++) { //loops days
-          let workday = day.Days[k];
+        for (var k = 0; k < day.Workouts.length; k++) { //loops workouts
+          let workday = day.Workouts[k];
           workoutName = workday.Name;
 
           workoutDay += "<tbody>";
-          workoutDay += "<tr>"
-          workoutDay += "<td>"
-          workoutDay += "" + workday.Name + ""
-          workoutDay += "</td-col>"
-          workoutDay += "<td>"
-          workoutDay += weightCalc(weekName, dayName, workoutName); "/" + workday.Set1 + ""
-          workoutDay += "</td>"
-          workoutDay += "<td>"
-          workoutDay += "" + workday.Set2 + ""
-          workoutDay += "</td>"
-          workoutDay += "<td>"
-          workoutDay += "" + workday.Set3 + ""
-          workoutDay += "</td>"
-          workoutDay += "<td>"
-          workoutDay += "" + workday.Set4 + ""
+          workoutDay += "<tr>";
+          workoutDay += "<td>";
+          workoutDay += workday.Name;
+          workoutDay += "</td-col>";
+          workoutDay += "<td>";
+          let weight = weightCalc(weekName, dayName, workoutName, 1);
+          workoutDay +=  weight + "/" + workday.Set1;
+          workoutDay += "</td>";
+          workoutDay += "<td>";
+          let weight2 = weightCalc(weekName, dayName, workoutName, 2);
+          workoutDay += weight2 + "/" + workday.Set2;
+          workoutDay += "</td>";
+          workoutDay += "<td>";
+          let weight3 = weightCalc(weekName, dayName, workoutName, 3);
+          workoutDay += weight3 + "/" + workday.Set3;
+          workoutDay += "</td>";
+          workoutDay += "<td>";
+          let weight4 = weightCalc(weekName, dayName, workoutName, 4);
+          workoutDay += weight4 + "/" + workday.Set4;
           workoutDay += "</td>";
           workoutDay += "</tr>";
           workoutDay += "</tbody>";
@@ -98,10 +114,6 @@ export class ItemDetailPage {
 
       $('#workOutPlan').append(workoutDay);
     });
-  }
-
-  ionViewDidLoad(requestedWeekId: string) {
-    this.populateWeek(requestedWeekId);
   }
 
 }
