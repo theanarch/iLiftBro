@@ -13,7 +13,7 @@ import { Items } from '../../providers';
 export class ListMasterPage {
   currentItems: Item[];
   public buttonColor: string = 'secondary';
-
+  public buttonText: string = 'Done';
 
   constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController) {
     this.currentItems = this.items.query();
@@ -55,75 +55,32 @@ export class ListMasterPage {
     });
   }
 
-  Done2(event) {
-    var buttonElementId = event.path[1].id;
-
-    var listElementId = "week" + buttonElementId.substring(6); //retrieving Id from button. "button" has 6 letters => starting from 6 
-    var listElement = document.getElementById(listElementId);
-    // var buttonElement = document.getElementById(buttonElementId);
-
-    // instanstiating new variables
-    var textDecoration = listElement.style.getPropertyValue("text-decoration"); // gets current text-decoration status
-    var textColor;
-
-    if (textDecoration != "line-through") {
-      textDecoration = "line-through";
-      textColor = "lightgreen";
-    } else {
-      textDecoration = "";
-      textColor = "";
-    }
-    listElement.style.setProperty("text-decoration", textDecoration);
-    listElement.style.webkitTextFillColor = textColor;
-  }
-
-
   Done(event) {
-    var buttonElementId = event.path[1].id;
-    // console.log(buttonElementId);
-    var listElementId = "week" + buttonElementId.substring(6); //retrieving Id from button. "button" has 6 letters => starting from 6 
-    var listElement = document.getElementById(listElementId);
-    // var buttonElement = document.getElementById(buttonElementId);
-    var textDecoration = listElement.style.getPropertyValue("text-decoration"); // gets current text-decoration status
-    console.log(textDecoration);
-    // instanstiating new variables
-    var textColor;
-    // var textDecoration;
-    var listElementTextColor;
-    // var buttonElementHTML;
-    // var buttonBackgroundColor;
 
-    // if (this.buttonColor === 'secondary') {
-    //   buttonElement.innerHTML = "Undone";
-    //   textColor = 'lightgreen';
-    //   this.buttonColor = 'primary';
-    //   textDecoration = "line-through";
-    // }
-    // else {
-    //   buttonElement.innerHTML = 'Done';
-    //   this.buttonColor = 'secondary';
-    //   textDecoration = "";
-    //   textColor = "";
-    // }
+    if (event != null) {
+      var buttonElementId = event.path[1].id;
 
-    if (textDecoration != 'line-through') {
-      textDecoration = 'line-through';
-      listElementTextColor = '#32db64'; //secondary(grön)
-      // buttonElementHTML = "<span class='button-inner'>"+"Undone"+"<span>";
-      // buttonBackgroundColor = '#488aff'; //primary(blå)
-    } else {
-      textDecoration = '';
-      listElementTextColor = ''; //
-      // buttonElementHTML = "<span class='button-inner'>"+"Done"+"<span>";
-      // buttonBackgroundColor = '#32db64';
+      var listElementId = "week" + buttonElementId.substring(6); //retrieving Id from button. "button" has 6 letters => starting from 6 
+        if (listElementId != "week") {
+        var listElement = document.getElementById(listElementId);
+        var textDecoration = listElement.style.getPropertyValue("text-decoration"); // gets current text-decoration status
+        var textColor;
+
+        if (textDecoration != "line-through") {
+          textDecoration = "line-through";
+          textColor = "lightgreen";
+          this.buttonColor = 'jonas-grey';
+          this.buttonText = 'Undo';        
+        } else {
+          textDecoration = "";
+          textColor = "";
+          this.buttonColor = 'secondary';
+          this.buttonText = 'Done';
+        }
+        listElement.style.webkitTextFillColor = textColor;
+        listElement.style.setProperty("text-decoration", textDecoration);
+      }
     }
-
-    listElement.style.setProperty("text-decoration", listElementTextColor);
-    listElement.style.webkitTextFillColor = textColor;
-    // buttonElement.style.setProperty("background-color", buttonBackgroundColor);
-    // buttonElement.innerHTML = buttonElementHTML;
-    // $('buttonElementId')
   }
-
-
 }
+

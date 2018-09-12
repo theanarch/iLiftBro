@@ -25,7 +25,7 @@ export class ItemDetailPage {
     // this.ionViewDidLoad(requestedWeekId);
   }
 
-  private RoundTo(calcWeight: number)
+  private RoundTo(calcWeight: number):number
   {
     let roundTo = 2.5;
     return roundTo * Math.round(calcWeight*0.8*roundTo);
