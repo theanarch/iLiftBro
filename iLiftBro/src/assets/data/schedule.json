@@ -1,0 +1,206 @@
+[
+    {
+        "workoutDetail": "week1Day1Squat1",
+        "percentage": "0.8"
+    },
+    {
+        "workoutDetail": "week1Day1Squat2",
+        "percentage": "0.8"
+    },
+    {
+        "workoutDetail": "week1Day1Squat3",
+        "percentage": "0.8"
+    },
+    {
+        "workoutDetail": "week1Day1Squat4",
+        "percentage": "0.8"
+    },
+    {
+        "workoutDetail": "week1Day1Deadlift1",
+        "percentage": "0.8"
+    },
+    {
+        "workoutDetail": "week1Day1Deadlift2",
+        "percentage": "0.8"
+    },
+    {
+        "workoutDetail": "week1Day2Bench Press1",
+        "percentage": "0.5"
+    },
+    {
+        "workoutDetail": "week1Day2Bench Press2",
+        "percentage": "0.675"
+    },
+    {
+        "workoutDetail": "week1Day2Bench Press3",
+        "percentage": "0.75"
+    },
+    {
+        "workoutDetail": "week1Day2Bench Press4",
+        "percentage": "0.775"
+    },
+    {
+        "workoutDetail": "week1Day3Bench Press1",
+        "percentage": "0.5"
+    },
+    {
+        "workoutDetail": "week1Day3Bench Press2",
+        "percentage": "0.675"
+    },
+    {
+        "workoutDetail": "week1Day3Bench Press3",
+        "percentage": "0.75"
+    },    {
+        "workoutDetail": "week1Day3Bench Press4",
+        "percentage": "0.775"
+    },    {
+        "workoutDetail": "week1Day4Squat1",
+        "percentage": "0.7"
+    },    {
+        "workoutDetail": "week1Day4Squat2",
+        "percentage": "0.7"
+    },    {
+        "workoutDetail": "week1Day4Squat3",
+        "percentage": "0.7"
+    },    {
+        "workoutDetail": "week1Day4Squat4",
+        "percentage": "0.7"
+    },    {
+        "workoutDetail": "week1Day4Deadlift1",
+        "percentage": "0.7"
+    },    {
+        "workoutDetail": "week1Day4Deadlift2",
+        "percentage": "0.7"
+    },    {
+        "workoutDetail": "week1Day4Deadlift3",
+        "percentage": "0.7"
+    },    {
+        "workoutDetail": "week1Day4Deadlift4",
+        "percentage": "0.7"
+    },    {
+        "workoutDetail": "week1Day5Bench Press1",
+        "percentage": "0.8"
+    },    {
+        "workoutDetail": "week2Day1Squat1",
+        "percentage": "0.8"
+    },    {
+        "workoutDetail": "week2Day2Bench Press1",
+        "percentage": "0.725"
+    },    {
+        "workoutDetail": "week2Day2Bench Press2",
+        "percentage": "0.775"
+    },    {
+        "workoutDetail": "week2Day2Bench Press3",
+        "percentage": "0.8"
+    },    {
+        "workoutDetail": "week2Day3Squat1",
+        "percentage": "0.8"
+    },    {
+        "workoutDetail": "week2Day4Bench Press1",
+        "percentage": "0.725"
+    },    {
+        "workoutDetail": "week2Day4Bench Press2",
+        "percentage": "0.775"
+    },    {
+        "workoutDetail": "week2Day4Bench Press3",
+        "percentage": "0.8"
+    },    {
+        "workoutDetail": "week2Day5Bench Press1",
+        "percentage": "0.8"
+    },    {
+        "workoutDetail": "week3Day1Squat1",
+        "percentage": "0.85"
+    },    {
+        "workoutDetail": "week3Day1Squat2",
+        "percentage": "0.85"
+    },    {
+        "workoutDetail": "week3Day1Squat3",
+        "percentage": "0.85"
+    },    {
+        "workoutDetail": "week3Day1Deadlift1",
+        "percentage": "0.875"
+    },    {
+        "workoutDetail": "week3Day1Deadlift2",
+        "percentage": "0.875"
+    },    {
+        "workoutDetail": "week3Day2Bench Press1",
+        "percentage": "0.85"
+    },    {
+        "workoutDetail": "week3Day2Bench Press2",
+        "percentage": "0.85"
+    },    {
+        "workoutDetail": "week3Day2Bench Press3",
+        "percentage": "0.85"
+    },    {
+        "workoutDetail": "week3Day3Squat1",
+        "percentage": "0.85"
+    },    {
+        "workoutDetail": "week3Day4Bench Press1",
+        "percentage": "0.87"
+    },   {
+        "workoutDetail": "week3Day4Bench Press2",
+        "percentage": "0.87"
+    },   {
+        "workoutDetail": "week3Day4Bench Press3",
+        "percentage": "0.87"
+    },   {
+        "workoutDetail": "week4Day1Squat1",
+        "percentage": "0.87"
+    },
+    {
+        "workoutDetail": "week4Day1Squat2",
+        "percentage": "0.9"
+    },
+    {
+        "workoutDetail": "week4Day1Squat2",
+        "percentage": "0.92"
+    },  {
+        "workoutDetail": "week4Day2Bench Press1",
+        "percentage": "0.875"
+    },{
+        "workoutDetail": "week4Day2Bench Press2",
+        "percentage": "0.9"
+    },{
+        "workoutDetail": "week4Day2Bench Press3",
+        "percentage": "0.9"
+    },{
+        "workoutDetail": "week4Day3Squat1",
+        "percentage": "0.9"
+    },{
+        "workoutDetail": "week4Day3Squat2",
+        "percentage": "0.95"
+    },{
+        "workoutDetail": "week4Day3Deadlift1",
+        "percentage": "0.9"
+    },{
+        "workoutDetail": "week4Day3Deadlift2",
+        "percentage": "0.95"
+    },{
+        "workoutDetail": "week4Day4Bench Press1",
+        "percentage": "0.875"
+    },{
+        "workoutDetail": "week4Day4Bench Press2",
+        "percentage": "0.9"
+    },{
+        "workoutDetail": "week4Day4Bench Press3",
+        "percentage": "0.95"
+    },{
+        "workoutDetail": "week5Day1Squat1",
+        "percentage": "0.975"
+    },{
+        "workoutDetail": "week5Day1Deadlift1",
+        "percentage": "0.675"
+    },{
+        "workoutDetail": "week5Day1Deadlift2",
+        "percentage": "0.7"
+    },{
+        "workoutDetail": "week5Day1Deadlift3",
+        "percentage": "0.725"
+    },{
+        "workoutDetail": "week5Day2Bench Press1",
+        "percentage": "0.975"
+    },{
+        "workoutDetail": "week5Day3Deadlift1",
+        "percentage": "0.975"
+    }
+]

@@ -25,23 +25,17 @@ export class ItemDetailPage {
     // this.ionViewDidLoad(requestedWeekId);
   }
 
-  private RoundTo(calcWeight: number):number
-  {
+  private RoundTo(calcWeight: number): number {
     let roundTo = 2.5;
-    return roundTo * Math.round(calcWeight*0.8*roundTo);
+    return roundTo * Math.round(calcWeight * 0.8 * roundTo);
   }
 
-  public weightCalc(week: string, day: string, workout: string, set: number): string 
-  {
-    let calculatedWeight;
-    // calculatedWeight
-
-    return "80";
+  public asdf(week: string, day: string, workout: string, set: number): string {
+    return "null";
   }
 
   populateWeek(requestedWeekId: string) {
-    console.log(requestedWeekId.toString());
-    var filePath = "./assets/data/"+ requestedWeekId +".json";
+    var filePath = "./assets/data/" + requestedWeekId + ".json";
 
     // var filePath = "./assets/data/week1.json";
 
@@ -51,12 +45,19 @@ export class ItemDetailPage {
     var dayName = "";
     var workoutName = "";
 
-    let weightCalc = (week: string, day: string, workout: string, set: number) => {
+    let asdf = (week: string, day: string, workout: string, set: number) => {
       if (workout != 'Squat' && workout != 'Bench Press' && workout != 'Deadlift') {
         return ' ';
       }
       else {
-        return this.weightCalc(week, day, workout, set);
+        let text: string = "get" + week + day + workout + set;
+        let item = localStorage.getItem(text);
+        console.log(item);
+        if (item != null) {
+          return localStorage.getItem(text);
+        } else {
+          return "-";
+        }
       }
     }
 
@@ -90,19 +91,19 @@ export class ItemDetailPage {
           workoutDay += workday.Name;
           workoutDay += "</td-col>";
           workoutDay += "<td>";
-          let weight = weightCalc(weekName, dayName, workoutName, 1);
-          workoutDay +=  weight + "/" + workday.Set1;
+          let weight = asdf(weekName, dayName, workoutName, 1);
+          workoutDay += weight + "/" + workday.Set1;
           workoutDay += "</td>";
           workoutDay += "<td>";
-          let weight2 = weightCalc(weekName, dayName, workoutName, 2);
+          let weight2 = asdf(weekName, dayName, workoutName, 2);
           workoutDay += weight2 + "/" + workday.Set2;
           workoutDay += "</td>";
           workoutDay += "<td>";
-          let weight3 = weightCalc(weekName, dayName, workoutName, 3);
+          let weight3 = asdf(weekName, dayName, workoutName, 3);
           workoutDay += weight3 + "/" + workday.Set3;
           workoutDay += "</td>";
           workoutDay += "<td>";
-          let weight4 = weightCalc(weekName, dayName, workoutName, 4);
+          let weight4 = asdf(weekName, dayName, workoutName, 4);
           workoutDay += weight4 + "/" + workday.Set4;
           workoutDay += "</td>";
           workoutDay += "</tr>";
@@ -115,5 +116,5 @@ export class ItemDetailPage {
       $('#workOutPlan').append(workoutDay);
     });
   }
-
+  local
 }

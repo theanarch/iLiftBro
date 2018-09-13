@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { IonicPageModule } from 'ionic-angular';
-
+import { IonicStorageModule } from '@ionic/storage';
 import { SettingsPage } from './settings';
 
 
@@ -11,7 +11,8 @@ import { SettingsPage } from './settings';
   ],
   imports: [
     IonicPageModule.forChild(SettingsPage),
-    TranslateModule.forChild()
+    TranslateModule.forChild(),
+    IonicStorageModule.forRoot()
   ],
   exports: [
     SettingsPage,

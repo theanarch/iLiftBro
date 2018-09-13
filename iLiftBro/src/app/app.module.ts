@@ -18,7 +18,6 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import 'jquery';
 
-
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
 export function createTranslateLoader(http: HttpClient) {
@@ -59,6 +58,7 @@ export const fireBaseConfig = {
     AngularFireModule.initializeApp(fireBaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
+    IonicStorageModule.forRoot(),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

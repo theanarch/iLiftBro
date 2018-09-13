@@ -13,8 +13,9 @@ import { TabsPage } from '../../pages/tabs/tabs';
 })
 export class SettingsPage {
   options: any;
-  Height: string = '';
-  shit = {};
+  bodySettings = { Height: "", Weight: "" };
+  liftSettings = { Squat: "", Deadlift: "", BenchPress: "" };
+
   settingsReady = false;
   form: FormGroup;
 
@@ -63,10 +64,6 @@ export class SettingsPage {
     });
   }
 
-  ionViewDidLoad() {
-    // Build an empty form for the template to render
-    this.form = this.formBuilder.group({});
-  }
 
   ionViewWillEnter() {
     // Build an empty form for the template to render
@@ -87,21 +84,56 @@ export class SettingsPage {
     });
   }
 
-  saveResult(){
-    localStorage.setItem("Height",this.shit.Height);
-    localStorage.setItem("Weight",this.shit.Weight);
-    
+  private RoundTo(calcWeight: number, percentage: number): number {
+    let roundTo = 2.5;
+    return roundTo * Math.round((calcWeight * percentage) / roundTo);
+  }
+
+  saveResult() {
+    localStorage.setItem("Height", this.bodySettings.Height);
+    localStorage.setItem("Weight", this.bodySettings.Weight);
+    localStorage.setItem("Squat", this.liftSettings.Squat);
+    localStorage.setItem("Deadlift", this.liftSettings.Deadlift);
+    localStorage.setItem("BenchPress", this.liftSettings.BenchPress);
+
+    let RoundTo = (calcWeight: number, percentage: number): number => {
+      let something = this.RoundTo(calcWeight, percentage);
+      return something;
+    }
+
+
+    let filePath = "./assets/data/schedule.json";
+    $.getJSON(filePath, function (json) {
+      for (var i = 0; i < json.length; i++) {
+        console.log(json[i]);
+        let workoutDetail = json[i].workoutDetail;
+        let percentage: number = json[i].percentage;
+        localStorage.setItem("get"+workoutDetail, RoundTo(Number(localStorage.getItem("Squat")),
+          Number(percentage)).toString());
+      }
+    });
+
+
     this.presentLoadingText();
+
+  }
+
+  loadData(filePath: string) {
+
   }
 
   presentLoadingText() {
     let loading = this.loadingCtrl.create({
       spinner: 'ios',
       content: 'Processing data...',
-      duration: 3000
+      duration: 2000
     });
-  
+
     loading.present();
+  }
+
+  ionViewDidLoad() {
+    this.form = this.formBuilder.group({});
   }
 
   ngOnChanges() {

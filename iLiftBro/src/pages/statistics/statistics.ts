@@ -35,7 +35,6 @@ export class StatisticsPage {
   }
 
   ionViewDidLoad() {
-    this.typo = localStorage.getItem("Height") + localStorage.getItem("Weight");
   }
 
 }

@@ -15,44 +15,40 @@
 
       <ion-item>
         <ion-label fixed>Height(cm)</ion-label>
-        <ion-input type="number" [(ngModel)]="shit.Height" name="Height"></ion-input>
+        <ion-input type="number" [(ngModel)]="bodySettings.Height" name="Height"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label fixed>Weight(kg)</ion-label>
-        <ion-input type="number" [(ngModel)]="shit.Weight" name="Weight"></ion-input>
+        <ion-input type="number" [(ngModel)]="bodySettings.Weight" name="Weight"></ion-input>
       </ion-item>
     </ion-list>
 
-    <!-- Max repetition inputs -->
-    <!-- <ion-list padding>
+    <ion-list padding>
       <h2 style="line-height: 0em;padding-top:1em;">Max repetition</h2>
       <p>Fill in your weight for a max repetition for each of the lifts below, in <b>kilograms</b>.</p>
 
       <ion-item>
         <ion-label fixed>Squat</ion-label>
-        <ion-input type="number"></ion-input>
+        <ion-input type="number" [(ngModel)]="liftSettings.Squat" name="Squat"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label fixed>Bench press</ion-label>
-        <ion-input type="number" value=""></ion-input>
+        <ion-label fixed>Bench Press</ion-label>
+        <ion-input type="number" value="" [(ngModel)]="liftSettings.BenchPress" name="BenchPress"></ion-input>
       </ion-item>
 
       <ion-item id="rounded">
         <ion-label fixed>Deadlift</ion-label>
-        <ion-input type="number"></ion-input>
+        <ion-input type="number" [(ngModel)]="liftSettings.Deadlift" name="Deadlift"></ion-input>
       </ion-item>
-    </ion-list> -->
+    </ion-list>
 
     <div class="btn">
       <button ion-button round outline type="submit">Save Changes</button>
     </div>
     <!-- [navPush]="pushPage" -->
   </form>
-
-
-
 
 
     <!-- Kolla hur dessa funkar sedan -->
