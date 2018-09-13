@@ -40,13 +40,13 @@ export class MyApp {
     { title: 'Tutorial', component: 'TutorialPage' },
     { title: 'Welcome', component: 'WelcomePage' },
     { title: 'Tabs', component: 'TabsPage' },
-    // { title: 'Cards', component: 'CardsPage' },
-    // { title: 'Content', component: 'ContentPage' },
     { title: 'Login', component: 'LoginPage' },
     { title: 'Signup', component: 'SignupPage' },
     { title: 'Master Detail', component: 'ListMasterPage' },
-    // { title: 'Menu', component: 'MenuPage' },
     { title: 'Settings', component: 'SettingsPage' },
+    // { title: 'Cards', component: 'CardsPage' },
+    // { title: 'Content', component: 'ContentPage' },
+    // { title: 'Menu', component: 'MenuPage' },
     // { title: 'Search', component: 'SearchPage' }
   ]
   
@@ -62,9 +62,6 @@ export class MyApp {
       this.logPage = 'LoginPage';
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-      
-      // this.client = new WindowsAzure.MobileServiceClient('https://iliftbro.azurewebsites.net');
-      // this.table = this.client.getTable(User);
     });
     
     this.initTranslate();

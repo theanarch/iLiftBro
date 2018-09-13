@@ -21,38 +21,22 @@ export class ItemDetailPage {
     this.item = navParams.get('item') || items.defaultItem;
     var requestedWeekId = "week" + this.item.week;
     this.populateWeek(requestedWeekId);
-
-    // this.ionViewDidLoad(requestedWeekId);
-  }
-
-  private RoundTo(calcWeight: number): number {
-    let roundTo = 2.5;
-    return roundTo * Math.round(calcWeight * 0.8 * roundTo);
-  }
-
-  public asdf(week: string, day: string, workout: string, set: number): string {
-    return "null";
   }
 
   populateWeek(requestedWeekId: string) {
     var filePath = "./assets/data/" + requestedWeekId + ".json";
-
-    // var filePath = "./assets/data/week1.json";
-
-    //variable declaration
     var workoutDay = "";
     var weekName = "";
     var dayName = "";
     var workoutName = "";
 
-    let asdf = (week: string, day: string, workout: string, set: number) => {
-      if (workout != 'Squat' && workout != 'Bench Press' && workout != 'Deadlift') {
-        return ' ';
+    let getWorkoutDetail = (week: string, day: string, workout: string, set: number, reps: string) => {
+      if (workout != 'Squat' && workout != 'Bench Press' && workout != 'Deadlift' && reps != '-') {
+        return '▢';
       }
       else {
         let text: string = "get" + week + day + workout + set;
         let item = localStorage.getItem(text);
-        console.log(item);
         if (item != null) {
           return localStorage.getItem(text);
         } else {
@@ -91,19 +75,19 @@ export class ItemDetailPage {
           workoutDay += workday.Name;
           workoutDay += "</td-col>";
           workoutDay += "<td>";
-          let weight = asdf(weekName, dayName, workoutName, 1);
+          let weight = getWorkoutDetail(weekName, dayName, workoutName, 1, workday.Set1);
           workoutDay += weight + "/" + workday.Set1;
           workoutDay += "</td>";
           workoutDay += "<td>";
-          let weight2 = asdf(weekName, dayName, workoutName, 2);
+          let weight2 = getWorkoutDetail(weekName, dayName, workoutName, 2, workday.Set2);
           workoutDay += weight2 + "/" + workday.Set2;
           workoutDay += "</td>";
           workoutDay += "<td>";
-          let weight3 = asdf(weekName, dayName, workoutName, 3);
+          let weight3 = getWorkoutDetail(weekName, dayName, workoutName, 3, workday.Set3);
           workoutDay += weight3 + "/" + workday.Set3;
           workoutDay += "</td>";
           workoutDay += "<td>";
-          let weight4 = asdf(weekName, dayName, workoutName, 4);
+          let weight4 = getWorkoutDetail(weekName, dayName, workoutName, 4, workday.Set4);
           workoutDay += weight4 + "/" + workday.Set4;
           workoutDay += "</td>";
           workoutDay += "</tr>";

@@ -101,25 +101,17 @@ export class SettingsPage {
       return something;
     }
 
-
     let filePath = "./assets/data/schedule.json";
     $.getJSON(filePath, function (json) {
       for (var i = 0; i < json.length; i++) {
-        console.log(json[i]);
         let workoutDetail = json[i].workoutDetail;
         let percentage: number = json[i].percentage;
-        localStorage.setItem("get"+workoutDetail, RoundTo(Number(localStorage.getItem("Squat")),
+        let workout = json[i].workout; //ska ändras till bara en jsonfil med alla veckor och mer detaljerad
+        localStorage.setItem("get"+workoutDetail, RoundTo(Number(localStorage.getItem(workout)),
           Number(percentage)).toString());
       }
     });
-
-
     this.presentLoadingText();
-
-  }
-
-  loadData(filePath: string) {
-
   }
 
   presentLoadingText() {
@@ -128,7 +120,6 @@ export class SettingsPage {
       content: 'Processing data...',
       duration: 2000
     });
-
     loading.present();
   }
 
@@ -136,6 +127,4 @@ export class SettingsPage {
     this.form = this.formBuilder.group({});
   }
 
-  ngOnChanges() {
-  }
 }

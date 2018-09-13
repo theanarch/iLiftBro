@@ -44,7 +44,7 @@ export class TutorialPage {
           {
             title: values.TUTORIAL_SLIDE3_TITLE,
             description: values.TUTORIAL_SLIDE3_DESCRIPTION,
-            image: 'assets/img/squat.png',
+            image: 'assets/img/Tap2.png',
           }
         ];
       });
