@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\iLiftBro",
-    "\\iLiftBro\\src"
+    "\\iLiftBro\\src",
+    "\\iLiftBro\\src\\assets",
+    "\\iLiftBro\\src\\assets\\data"
   ],
-  "SelectedNode": "\\iLiftBro\\src\\doneButton.js",
+  "SelectedNode": "\\iLiftBro\\src\\assets\\data\\schedule.json",
   "PreviewInSolutionExplorer": false
 }
